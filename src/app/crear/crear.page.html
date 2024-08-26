@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="app-primary">
+    <ion-title>Crear Equipos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>ProTeam</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <!-- Nombre del jugador -->
+      <ion-item>
+        <ion-label position="floating">Nombre del jugador</ion-label>
+        <ion-input
+          [(ngModel)]="nombreInput"
+          placeholder="Ingresa el nombre del jugador"
+          required
+        ></ion-input>
+      </ion-item>
+  
+      <!-- Nota del jugador -->
+      <ion-item>
+        <ion-label position="floating">Nota del jugador (1-10)</ion-label>
+        <ion-range min="1" max="10" step="1" snaps="true" [(ngModel)]="notaInput">
+          <ion-icon size="small" slot="start" name="star-outline"></ion-icon>
+          <ion-icon size="small" slot="end" name="star"></ion-icon>
+        </ion-range>
+      </ion-item>
+  
+      <!-- Botón para añadir jugador -->
+      <ion-button expand="block" color="app-secondary" (click)="addJugador()" [disabled]="!nombreInput || notaInput < 1">
+        Añadir Jugador
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item *ngFor="let jugador of jugadores">
+      <ion-label>{{jugador.nombre}}</ion-label>
+      <ion-label>{{jugador.nota}}</ion-label>
+      <ion-button  color="app-secondary" (click)="borrarJugador(jugador)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="crearEquipos()" color="app-secondary">Crear Equipos</ion-button>
+  <ion-card *ngFor="let equipo of equiposHechos; let i= index">
+    <ion-card-header>
+      <ion-card-title>Equipo nº {{i+1}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let jugador of equipo">
+          <ion-label>{{jugador.nombre}}</ion-label>
+          <ion-label>{{jugador.nota}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

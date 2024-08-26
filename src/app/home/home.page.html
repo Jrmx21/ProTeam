@@ -1,20 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>ProTeam</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>ProTeam es una aplicación para el móvil que te permitirá crear tus equipos de cualquier deporte de manera equitativa para que haya un encuentro entretenido y competitivo.</p>
+  </ion-card-content>
+</ion-card>
+<ion-button expand="block" routerLink="/crear" color="app-secondary">Crear equipos</ion-button>
 </ion-content>

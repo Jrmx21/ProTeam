@@ -35,3 +35,36 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+:root {
+	--ion-color-app-primary: #eb346b;
+	--ion-color-app-primary-rgb: 235,52,107;
+	--ion-color-app-primary-contrast: #000000;
+	--ion-color-app-primary-contrast-rgb: 0,0,0;
+	--ion-color-app-primary-shade: #cf2e5e;
+	--ion-color-app-primary-tint: #ed487a;
+}
+:root {
+	--ion-color-app-secondary: #34ebeb;
+	--ion-color-app-secondary-rgb: 52,235,235;
+	--ion-color-app-secondary-contrast: #000000;
+	--ion-color-app-secondary-contrast-rgb: 0,0,0;
+	--ion-color-app-secondary-shade: #2ecfcf;
+	--ion-color-app-secondary-tint: #48eded;
+}
+
+.ion-color-app-secondary {
+	--ion-color-base: var(--ion-color-app-secondary);
+	--ion-color-base-rgb: var(--ion-color-app-secondary-rgb);
+	--ion-color-contrast: var(--ion-color-app-secondary-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-app-secondary-contrast-rgb);
+	--ion-color-shade: var(--ion-color-app-secondary-shade);
+	--ion-color-tint: var(--ion-color-app-secondary-tint);
+}
+.ion-color-app-primary {
+	--ion-color-base: var(--ion-color-app-primary);
+	--ion-color-base-rgb: var(--ion-color-app-primary-rgb);
+	--ion-color-contrast: var(--ion-color-app-primary-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-app-primary-contrast-rgb);
+	--ion-color-shade: var(--ion-color-app-primary-shade);
+	--ion-color-tint: var(--ion-color-app-primary-tint);
+}
